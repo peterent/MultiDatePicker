@@ -24,6 +24,9 @@ struct ContentView: View {
     let testMinDate = Calendar.current.date(from: DateComponents(year: 2020, month: 10, day: 15))
     let testMaxDate = Calendar.current.date(from: DateComponents(year: 2021, month: 1, day: 14))
     
+    // Used to toggle an overlay containing a MultiDatePicker.
+    @State private var showOverlay = false
+    
     var selectedDateAsString: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -78,7 +81,47 @@ struct ContentView: View {
                 Image(systemName: "ellipsis.circle")
                 Text("Range")
             }
+            
+            // Here's how to put the MultiDatePicker into a pop-over/dialog using
+            // the .overlay modifier (see below).
+            VStack {
+                Text("Pop-Over").font(.title).padding()
+                Button("Selected \(anyDays.count) Days") {
+                    withAnimation {
+                        self.showOverlay.toggle()
+                    }
+                }.padding()
+            }
+            .tabItem {
+                Image(systemName: "square.stack.3d.up")
+                Text("Overlay")
+            }
         }
+        
+        // if you want to show the MultiDatePicker as an overlay somewhat similar to the Apple
+        // DatePicker, you can blur the background a bit and float the MultiDatePicker above a
+        // translucent background. Tapping outside of the MultiDatePicker removes it. Ideally
+        // you'd make this a custom modifier if you were doing this throughout your app.
+        .blur(radius: showOverlay ? 6 : 0)
+        .overlay(
+            ZStack {
+                if self.showOverlay {
+                    GeometryReader { reader in
+                        Rectangle()
+                            .foregroundColor(Color.black.opacity(0.25))
+                            .frame(width: reader.size.width, height: reader.size.height)
+                            .onTapGesture {
+                                withAnimation {
+                                    self.showOverlay.toggle()
+                                }
+                            }
+                    }.edgesIgnoringSafeArea(.all)
+                    MultiDatePicker(anyDays: self.$anyDays)
+                } else {
+                    EmptyView()
+                }
+            }
+        )
     }
 }
 
