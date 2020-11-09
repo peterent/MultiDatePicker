@@ -43,7 +43,7 @@ You can also set a `minDate` and/or a `maxDate` (both of which default to `nil`)
 
 ## Notes
 
-You can find out more on my blog at http://www.keaura.com/blogs but basically:
+You can find out more on my blog at http://www.keaura.com/blog but basically:
 
 - Download this repository
 - Build the app to test it out
