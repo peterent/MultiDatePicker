@@ -107,9 +107,7 @@ struct ContentView: View {
             ZStack {
                 if self.showOverlay {
                     GeometryReader { reader in
-                        Rectangle()
-                            .foregroundColor(Color.black.opacity(0.25))
-                            .frame(width: reader.size.width, height: reader.size.height)
+                        Color.black.opacity(0.25)
                             .onTapGesture {
                                 withAnimation {
                                     self.showOverlay.toggle()
