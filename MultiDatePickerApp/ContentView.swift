@@ -106,14 +106,13 @@ struct ContentView: View {
         .overlay(
             ZStack {
                 if self.showOverlay {
-                    GeometryReader { reader in
-                        Color.black.opacity(0.25)
-                            .onTapGesture {
-                                withAnimation {
-                                    self.showOverlay.toggle()
-                                }
+                    Color.black.opacity(0.25)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation {
+                                self.showOverlay.toggle()
                             }
-                    }.edgesIgnoringSafeArea(.all)
+                        }
                     MultiDatePicker(anyDays: self.$anyDays)
                 } else {
                     EmptyView()
