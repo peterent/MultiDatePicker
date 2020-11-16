@@ -8,13 +8,15 @@ This is where `MultiDataPicker` comes in. The standard Apple `DatePicker` lets y
 
 The `ContentView` gives you examples of each type of selection mode `MultiDatePicker` is capable of. You need a variable to use for binding and then just use it:
 
+> I've updated the code to let the selection determine the calendar presented. Before this update, the selections would appear, but the calendar would always show the month/year for the current date. With this update, the calendar reflects the selection.
+
 ### Single Day
 
 ```
 @State var selectedDate = Date()
 MultiDatePicker(singleDay: self.$selectedDate)
 ```
-Whenever the user taps a date on the control's calendar the wrapped value will change.
+Whenever the user taps a date on the control's calendar the wrapped value will change. The calendar shows the month and year for the date given.
 
 ### Collection of Days
 
@@ -23,7 +25,9 @@ Whenever the user taps a date on the control's calendar the wrapped value will c
 MultiDatePicker(anyDays: self.$manyDays)
 ```
 
-Whenever the user taps on a date on the control's calendar the date will be selected and added to the wrapped collection. If the date is already selected, the tap will remove it from the collection and change the wrapped value of the binding.
+Whenever the user taps on a date on the control's calendar the date will be selected and added to the wrapped collection. If the date is already selected, the tap will remove it from the collection and change the wrapped value of the binding. 
+
+The calendar in the control will reflect the first date in the array; otherwise it will show the month/year for the current date.
 
 ### Date Range
 
@@ -32,6 +36,8 @@ Whenever the user taps on a date on the control's calendar the date will be sele
 MultiDatePicker(dateRange: self.$range)
 ```
 The wrapped value of the binding only changes if two dates are selected. If a third date is picked, the wrapped value is reset to `nil` and the range is removed from the calendar leaving only the one date selected. The user has to tap another date to complete the range and change the wrapped value.
+
+The calendar in the control will show the month/year for the first day of the range. If the range is nil it will show the current month/year.
 
 ## More Options
 
