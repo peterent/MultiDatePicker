@@ -76,6 +76,12 @@ class MDPModel: NSObject, ObservableObject {
         self.minDate = minDate
         self.maxDate = maxDate
         setSelection(anyDays.wrappedValue)
+        
+        // set the controlDate to be the first of the anyDays if the
+        // anyDays array is not empty.
+        if let useDate = anyDays.wrappedValue.first {
+            controlDate = useDate
+        }
         buildDays()
     }
     
@@ -89,6 +95,9 @@ class MDPModel: NSObject, ObservableObject {
         self.minDate = minDate
         self.maxDate = maxDate
         setSelection(singleDay.wrappedValue)
+        
+        // set the controlDate to be this singleDay
+        controlDate = singleDay.wrappedValue
         buildDays()
     }
     
@@ -102,6 +111,11 @@ class MDPModel: NSObject, ObservableObject {
         self.minDate = minDate
         self.maxDate = maxDate
         setSelection(dateRange.wrappedValue)
+        
+        // set the selection to be the first in the range if the range exists
+        if let dateRange = dateRange.wrappedValue {
+            controlDate = dateRange.lowerBound
+        }
         buildDays()
     }
     
