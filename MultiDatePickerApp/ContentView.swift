@@ -21,8 +21,8 @@ struct ContentView: View {
     
     // Another thing you can do with the MultiDatePicker is limit the range of dates that can
     // be selected.
-    let testMinDate = Calendar.current.date(from: DateComponents(year: 2020, month: 10, day: 15))
-    let testMaxDate = Calendar.current.date(from: DateComponents(year: 2021, month: 1, day: 14))
+    let testMinDate = Calendar.current.date(from: DateComponents(year: 2021, month: 4, day: 1))
+    let testMaxDate = Calendar.current.date(from: DateComponents(year: 2021, month: 5, day: 30))
     
     // Used to toggle an overlay containing a MultiDatePicker.
     @State private var showOverlay = false
@@ -97,6 +97,15 @@ struct ContentView: View {
                 Text("Overlay")
             }
         }
+        .onChange(of: self.selectedDate, perform: { date in
+            print("Single date selected: \(date)")
+        })
+        .onChange(of: self.anyDays, perform: { days in
+            print("Any days selected: \(days)")
+        })
+        .onChange(of: self.dateRange, perform: { dateRange in
+            print("Range selected: \(String(describing: dateRange))")
+        })
         
         // if you want to show the MultiDatePicker as an overlay somewhat similar to the Apple
         // DatePicker, you can blur the background a bit and float the MultiDatePicker above a
