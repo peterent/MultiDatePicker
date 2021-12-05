@@ -43,7 +43,16 @@ class MDPModel: NSObject, ObservableObject {
     @Published var selections = [Date]()
     
     // the localized days of the week
-    let dayNames = Calendar.current.shortWeekdaySymbols
+    var dayNames: [String] {
+        if Calendar.current.firstWeekday == 2 {
+        var array = Calendar.current.shortWeekdaySymbols
+        let fDay = array.removeFirst()
+        array.append(fDay)
+        return array
+        } else {
+            return Calendar.current.shortWeekdaySymbols
+        }
+    }
     
     // MARK: - PRIVATE VARS
     
@@ -232,7 +241,11 @@ extension MDPModel {
         let range = calendar.range(of: .day, in: .month, for: date)!
         let numDays = range.count
         
-        let ord = calendar.component(.weekday, from: date)
+        var ord: Int {
+            let tmp =  calendar.firstWeekday == 2 ? calendar.component(.weekday, from: date) - 1 : calendar.component(.weekday, from: date)
+                  return tmp == 0 ? 7 : tmp
+              }
+        
         var index = 0
         
         let today = Date()
