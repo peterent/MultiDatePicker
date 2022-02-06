@@ -33,17 +33,17 @@ import SwiftUI
  *  - maxDate: Date? = nil
  *      Days after maxDate are not selectable.
  */
-struct MultiDatePicker: View {
+public struct MultiDatePicker: View {
     
     // the type of picker, based on which init() function is used.
-    enum PickerType {
+	public enum PickerType {
         case singleDay
         case anyDays
         case dateRange
     }
     
     // lets all or some dates be elligible for selection.
-    enum DateSelectionChoices {
+	public enum DateSelectionChoices {
         case allDays
         case weekendsOnly
         case weekdaysOnly
@@ -53,7 +53,7 @@ struct MultiDatePicker: View {
         
     // selects only a single date
     
-    init(singleDay: Binding<Date>,
+	public init(singleDay: Binding<Date>,
          includeDays: DateSelectionChoices = .allDays,
          minDate: Date? = nil,
          maxDate: Date? = nil
@@ -63,7 +63,7 @@ struct MultiDatePicker: View {
     
     // selects any number of dates, non-contiguous
     
-    init(anyDays: Binding<[Date]>,
+	public init(anyDays: Binding<[Date]>,
          includeDays: DateSelectionChoices = .allDays,
          minDate: Date? = nil,
          maxDate: Date? = nil
@@ -73,7 +73,7 @@ struct MultiDatePicker: View {
     
     // selects a closed date range
     
-    init(dateRange: Binding<ClosedRange<Date>?>,
+	public init(dateRange: Binding<ClosedRange<Date>?>,
          includeDays: DateSelectionChoices = .allDays,
          minDate: Date? = nil,
          maxDate: Date? = nil
@@ -81,7 +81,7 @@ struct MultiDatePicker: View {
         _monthModel = StateObject(wrappedValue: MDPModel(dateRange: dateRange, includeDays: includeDays, minDate: minDate, maxDate: maxDate))
     }
     
-    var body: some View {
+    public var body: some View {
         MDPMonthView()
             .environmentObject(monthModel)
     }

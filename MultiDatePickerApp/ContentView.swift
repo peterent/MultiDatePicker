@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MultiDatePicker
 
 /**
  * This ContentView shows how to use MultiDatePicker as an in-line View. You could also use it as an overlay

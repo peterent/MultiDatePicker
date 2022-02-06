@@ -3,64 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		321AB153255049EA00CE3EFC /* MultiDatePickerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB152255049EA00CE3EFC /* MultiDatePickerAppApp.swift */; };
 		321AB155255049EA00CE3EFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB154255049EA00CE3EFC /* ContentView.swift */; };
-		321AB157255049EA00CE3EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321AB156255049EA00CE3EFC /* Assets.xcassets */; };
-		321AB15A255049EA00CE3EFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321AB159255049EA00CE3EFC /* Preview Assets.xcassets */; };
-		321AB165255049EA00CE3EFC /* MultiDatePickerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB164255049EA00CE3EFC /* MultiDatePickerAppTests.swift */; };
-		321AB170255049EA00CE3EFC /* MultiDatePickerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB16F255049EA00CE3EFC /* MultiDatePickerAppUITests.swift */; };
-		321AB18125504FB100CE3EFC /* MDPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB18025504FB100CE3EFC /* MDPModel.swift */; };
-		321AB18625504FDE00CE3EFC /* MDPDayOfMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321AB18525504FDE00CE3EFC /* MDPDayOfMonth.swift */; };
-		326C9FF1255058FD0054B8F1 /* MDPMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C9FF0255058FD0054B8F1 /* MDPMonthView.swift */; };
-		326C9FF625507C920054B8F1 /* MDPMonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C9FF525507C920054B8F1 /* MDPMonthYearPicker.swift */; };
-		326C9FFB2550B5A50054B8F1 /* MDPDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C9FFA2550B5A50054B8F1 /* MDPDayView.swift */; };
-		3279D68825518F9F003D737D /* MDPContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279D68725518F9F003D737D /* MDPContentView.swift */; };
-		3279D68D2551918A003D737D /* MDPMonthYearPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279D68C2551918A003D737D /* MDPMonthYearPickerButton.swift */; };
-		3279D69725519604003D737D /* MultiDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279D69625519604003D737D /* MultiDatePicker.swift */; };
+		63CFDAF827AFF01F00229B73 /* MultiDatePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 63CFDAF727AFF01F00229B73 /* MultiDatePicker */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		321AB161255049EA00CE3EFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 321AB147255049E900CE3EFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 321AB14E255049EA00CE3EFC;
-			remoteInfo = MultiDatePickerApp;
-		};
-		321AB16C255049EA00CE3EFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 321AB147255049E900CE3EFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 321AB14E255049EA00CE3EFC;
-			remoteInfo = MultiDatePickerApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		321AB14F255049EA00CE3EFC /* MultiDatePickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiDatePickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321AB152255049EA00CE3EFC /* MultiDatePickerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerAppApp.swift; sourceTree = "<group>"; };
 		321AB154255049EA00CE3EFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		321AB156255049EA00CE3EFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		321AB159255049EA00CE3EFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		321AB15B255049EA00CE3EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		321AB160255049EA00CE3EFC /* MultiDatePickerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiDatePickerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		321AB164255049EA00CE3EFC /* MultiDatePickerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerAppTests.swift; sourceTree = "<group>"; };
-		321AB166255049EA00CE3EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		321AB16B255049EA00CE3EFC /* MultiDatePickerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiDatePickerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		321AB16F255049EA00CE3EFC /* MultiDatePickerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerAppUITests.swift; sourceTree = "<group>"; };
-		321AB171255049EA00CE3EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		321AB18025504FB100CE3EFC /* MDPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPModel.swift; sourceTree = "<group>"; };
-		321AB18525504FDE00CE3EFC /* MDPDayOfMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPDayOfMonth.swift; sourceTree = "<group>"; };
-		326C9FF0255058FD0054B8F1 /* MDPMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPMonthView.swift; sourceTree = "<group>"; };
-		326C9FF525507C920054B8F1 /* MDPMonthYearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPMonthYearPicker.swift; sourceTree = "<group>"; };
-		326C9FFA2550B5A50054B8F1 /* MDPDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPDayView.swift; sourceTree = "<group>"; };
-		3279D68725518F9F003D737D /* MDPContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPContentView.swift; sourceTree = "<group>"; };
-		3279D68C2551918A003D737D /* MDPMonthYearPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPMonthYearPickerButton.swift; sourceTree = "<group>"; };
-		3279D69625519604003D737D /* MultiDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePicker.swift; sourceTree = "<group>"; };
+		63CFDAF927AFF0C300229B73 /* MultiDatePicker */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MultiDatePicker; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		321AB15D255049EA00CE3EFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		321AB168255049EA00CE3EFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				63CFDAF827AFF01F00229B73 /* MultiDatePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +36,9 @@
 			isa = PBXGroup;
 			children = (
 				321AB151255049EA00CE3EFC /* MultiDatePickerApp */,
-				321AB163255049EA00CE3EFC /* MultiDatePickerAppTests */,
-				321AB16E255049EA00CE3EFC /* MultiDatePickerAppUITests */,
+				63CFDAF427AFEFF600229B73 /* Packages */,
 				321AB150255049EA00CE3EFC /* Products */,
+				63CFDAF627AFF01F00229B73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				321AB14F255049EA00CE3EFC /* MultiDatePickerApp.app */,
-				321AB160255049EA00CE3EFC /* MultiDatePickerAppTests.xctest */,
-				321AB16B255049EA00CE3EFC /* MultiDatePickerAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,61 +55,24 @@
 			children = (
 				321AB152255049EA00CE3EFC /* MultiDatePickerAppApp.swift */,
 				321AB154255049EA00CE3EFC /* ContentView.swift */,
-				327F233C25532A7D00AAA529 /* MultiDatePicker Source */,
-				321AB156255049EA00CE3EFC /* Assets.xcassets */,
 				321AB15B255049EA00CE3EFC /* Info.plist */,
-				321AB158255049EA00CE3EFC /* Preview Content */,
 			);
 			path = MultiDatePickerApp;
 			sourceTree = "<group>";
 		};
-		321AB158255049EA00CE3EFC /* Preview Content */ = {
+		63CFDAF427AFEFF600229B73 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				321AB159255049EA00CE3EFC /* Preview Assets.xcassets */,
+				63CFDAF927AFF0C300229B73 /* MultiDatePicker */,
 			);
-			path = "Preview Content";
+			name = Packages;
 			sourceTree = "<group>";
 		};
-		321AB163255049EA00CE3EFC /* MultiDatePickerAppTests */ = {
+		63CFDAF627AFF01F00229B73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				321AB164255049EA00CE3EFC /* MultiDatePickerAppTests.swift */,
-				321AB166255049EA00CE3EFC /* Info.plist */,
 			);
-			path = MultiDatePickerAppTests;
-			sourceTree = "<group>";
-		};
-		321AB16E255049EA00CE3EFC /* MultiDatePickerAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				321AB16F255049EA00CE3EFC /* MultiDatePickerAppUITests.swift */,
-				321AB171255049EA00CE3EFC /* Info.plist */,
-			);
-			path = MultiDatePickerAppUITests;
-			sourceTree = "<group>";
-		};
-		327F233C25532A7D00AAA529 /* MultiDatePicker Source */ = {
-			isa = PBXGroup;
-			children = (
-				3279D69625519604003D737D /* MultiDatePicker.swift */,
-				327F234025532A9400AAA529 /* Components */,
-			);
-			path = "MultiDatePicker Source";
-			sourceTree = "<group>";
-		};
-		327F234025532A9400AAA529 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				321AB18025504FB100CE3EFC /* MDPModel.swift */,
-				321AB18525504FDE00CE3EFC /* MDPDayOfMonth.swift */,
-				326C9FF0255058FD0054B8F1 /* MDPMonthView.swift */,
-				3279D68725518F9F003D737D /* MDPContentView.swift */,
-				326C9FFA2550B5A50054B8F1 /* MDPDayView.swift */,
-				326C9FF525507C920054B8F1 /* MDPMonthYearPicker.swift */,
-				3279D68C2551918A003D737D /* MDPMonthYearPickerButton.swift */,
-			);
-			path = Components;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,45 +91,12 @@
 			dependencies = (
 			);
 			name = MultiDatePickerApp;
+			packageProductDependencies = (
+				63CFDAF727AFF01F00229B73 /* MultiDatePicker */,
+			);
 			productName = MultiDatePickerApp;
 			productReference = 321AB14F255049EA00CE3EFC /* MultiDatePickerApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		321AB15F255049EA00CE3EFC /* MultiDatePickerAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 321AB177255049EA00CE3EFC /* Build configuration list for PBXNativeTarget "MultiDatePickerAppTests" */;
-			buildPhases = (
-				321AB15C255049EA00CE3EFC /* Sources */,
-				321AB15D255049EA00CE3EFC /* Frameworks */,
-				321AB15E255049EA00CE3EFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				321AB162255049EA00CE3EFC /* PBXTargetDependency */,
-			);
-			name = MultiDatePickerAppTests;
-			productName = MultiDatePickerAppTests;
-			productReference = 321AB160255049EA00CE3EFC /* MultiDatePickerAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		321AB16A255049EA00CE3EFC /* MultiDatePickerAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 321AB17A255049EA00CE3EFC /* Build configuration list for PBXNativeTarget "MultiDatePickerAppUITests" */;
-			buildPhases = (
-				321AB167255049EA00CE3EFC /* Sources */,
-				321AB168255049EA00CE3EFC /* Frameworks */,
-				321AB169255049EA00CE3EFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				321AB16D255049EA00CE3EFC /* PBXTargetDependency */,
-			);
-			name = MultiDatePickerAppUITests;
-			productName = MultiDatePickerAppUITests;
-			productReference = 321AB16B255049EA00CE3EFC /* MultiDatePickerAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -237,14 +109,6 @@
 				TargetAttributes = {
 					321AB14E255049EA00CE3EFC = {
 						CreatedOnToolsVersion = 12.1;
-					};
-					321AB15F255049EA00CE3EFC = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 321AB14E255049EA00CE3EFC;
-					};
-					321AB16A255049EA00CE3EFC = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 321AB14E255049EA00CE3EFC;
 					};
 				};
 			};
@@ -262,30 +126,12 @@
 			projectRoot = "";
 			targets = (
 				321AB14E255049EA00CE3EFC /* MultiDatePickerApp */,
-				321AB15F255049EA00CE3EFC /* MultiDatePickerAppTests */,
-				321AB16A255049EA00CE3EFC /* MultiDatePickerAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		321AB14D255049EA00CE3EFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				321AB15A255049EA00CE3EFC /* Preview Assets.xcassets in Resources */,
-				321AB157255049EA00CE3EFC /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		321AB15E255049EA00CE3EFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		321AB169255049EA00CE3EFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,49 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				321AB18625504FDE00CE3EFC /* MDPDayOfMonth.swift in Sources */,
-				326C9FF1255058FD0054B8F1 /* MDPMonthView.swift in Sources */,
-				321AB18125504FB100CE3EFC /* MDPModel.swift in Sources */,
-				326C9FF625507C920054B8F1 /* MDPMonthYearPicker.swift in Sources */,
-				326C9FFB2550B5A50054B8F1 /* MDPDayView.swift in Sources */,
-				3279D68D2551918A003D737D /* MDPMonthYearPickerButton.swift in Sources */,
-				3279D68825518F9F003D737D /* MDPContentView.swift in Sources */,
 				321AB155255049EA00CE3EFC /* ContentView.swift in Sources */,
-				3279D69725519604003D737D /* MultiDatePicker.swift in Sources */,
 				321AB153255049EA00CE3EFC /* MultiDatePickerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		321AB15C255049EA00CE3EFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				321AB165255049EA00CE3EFC /* MultiDatePickerAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		321AB167255049EA00CE3EFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				321AB170255049EA00CE3EFC /* MultiDatePickerAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		321AB162255049EA00CE3EFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 321AB14E255049EA00CE3EFC /* MultiDatePickerApp */;
-			targetProxy = 321AB161255049EA00CE3EFC /* PBXContainerItemProxy */;
-		};
-		321AB16D255049EA00CE3EFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 321AB14E255049EA00CE3EFC /* MultiDatePickerApp */;
-			targetProxy = 321AB16C255049EA00CE3EFC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		321AB172255049EA00CE3EFC /* Debug */ = {
@@ -466,7 +275,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MultiDatePickerApp/Preview Content\"";
 				DEVELOPMENT_TEAM = DF5H9M9376;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MultiDatePickerApp/Info.plist;
@@ -488,7 +296,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MultiDatePickerApp/Preview Content\"";
 				DEVELOPMENT_TEAM = DF5H9M9376;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MultiDatePickerApp/Info.plist;
@@ -501,90 +308,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		321AB178255049EA00CE3EFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DF5H9M9376;
-				INFOPLIST_FILE = MultiDatePickerAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.keaura.MultiDatePickerAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiDatePickerApp.app/MultiDatePickerApp";
-			};
-			name = Debug;
-		};
-		321AB179255049EA00CE3EFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DF5H9M9376;
-				INFOPLIST_FILE = MultiDatePickerAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.keaura.MultiDatePickerAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiDatePickerApp.app/MultiDatePickerApp";
-			};
-			name = Release;
-		};
-		321AB17B255049EA00CE3EFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DF5H9M9376;
-				INFOPLIST_FILE = MultiDatePickerAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.keaura.MultiDatePickerAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MultiDatePickerApp;
-			};
-			name = Debug;
-		};
-		321AB17C255049EA00CE3EFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DF5H9M9376;
-				INFOPLIST_FILE = MultiDatePickerAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.keaura.MultiDatePickerAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MultiDatePickerApp;
 			};
 			name = Release;
 		};
@@ -609,25 +332,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		321AB177255049EA00CE3EFC /* Build configuration list for PBXNativeTarget "MultiDatePickerAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				321AB178255049EA00CE3EFC /* Debug */,
-				321AB179255049EA00CE3EFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		321AB17A255049EA00CE3EFC /* Build configuration list for PBXNativeTarget "MultiDatePickerAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				321AB17B255049EA00CE3EFC /* Debug */,
-				321AB17C255049EA00CE3EFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63CFDAF727AFF01F00229B73 /* MultiDatePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultiDatePicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 321AB147255049E900CE3EFC /* Project object */;
 }

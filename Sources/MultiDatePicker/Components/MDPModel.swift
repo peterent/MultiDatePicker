@@ -62,7 +62,7 @@ class MDPModel: NSObject, ObservableObject {
     private var selectionType: MultiDatePicker.DateSelectionChoices = .allDays
     
     // the actual number of days in this calendar month/year (eg, 28 for February)
-    private var numDays = 0
+    var numDays = 0
     
     // MARK: - INIT
     
