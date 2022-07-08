@@ -30,7 +30,7 @@ struct MDPContentView: View {
             
             // Sun, Mon, etc.
             ForEach(0..<monthDataModel.dayNames.count, id: \.self) { index in
-                Text(monthDataModel.dayNames[index].uppercased())
+                Text(monthDataModel.dayNames[index].replacingOccurrences(of: ".", with: "").uppercased())
                     .font(.caption)
                     .foregroundColor(.gray)
             }

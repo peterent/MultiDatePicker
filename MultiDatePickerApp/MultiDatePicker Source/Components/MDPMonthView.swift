@@ -58,14 +58,14 @@ struct MDPMonthView: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.white)
+                .foregroundColor(Color(UIColor.systemBackground))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.accentColor, lineWidth: 1)
         )
         .padding()
-        .frame(width: 300, height: 300)
+        .frame(width: 300, height: 300) // FIXME: DYNAMIC SIZE
     }
 }
 

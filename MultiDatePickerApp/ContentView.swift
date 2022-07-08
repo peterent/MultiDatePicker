@@ -35,16 +35,20 @@ struct ContentView: View {
         
     var body: some View {
         TabView {
-            
             // Here's how to select a single date, but limiting the range of dates than be picked.
             // The binding (selectedDate) will be whatever date is currently picked.
             VStack {
-                Text("Single Day").font(.title).padding()
+                Text("Single Day")
+                    .font(.title)
+                    .padding()
+                
                 MultiDatePicker(
                     singleDay: self.$selectedDate,
                     minDate: testMinDate,
                     maxDate: testMaxDate)
-                Text(selectedDateAsString).padding()
+                
+                Text(selectedDateAsString)
+                    .padding()
             }
             .tabItem {
                 Image(systemName: "1.circle")
@@ -56,9 +60,14 @@ struct ContentView: View {
             // more dates, sorted in ascending order. In this example, the selectable dates
             // are limited to weekdays.
             VStack {
-                Text("Any Dates").font(.title).padding()
+                Text("Any Dates")
+                    .font(.title)
+                    .padding()
+                
                 MultiDatePicker(anyDays: self.$anyDays, includeDays: .weekdaysOnly)
-                Text("Selected \(anyDays.count) Days").padding()
+                
+                Text("Selected \(anyDays.count) Days")
+                    .padding()
             }
             .tabItem {
                 Image(systemName: "n.circle")
@@ -69,12 +78,18 @@ struct ContentView: View {
             // a date makes it the first date in the range, but the binding (dateRange) is
             // still nil. Tapping on another date completes the range and sets the binding.
             VStack {
-                Text("Date Range").font(.title).padding()
+                Text("Date Range")
+                    .font(.title)
+                    .padding()
+                
                 MultiDatePicker(dateRange: self.$dateRange)
+                
                 if let range = dateRange {
-                    Text("\(range)").padding()
+                    Text("\(range)")
+                        .padding()
                 } else {
-                    Text("Select two dates").padding()
+                    Text("Select two dates")
+                        .padding()
                 }
             }
             .tabItem {
@@ -85,27 +100,31 @@ struct ContentView: View {
             // Here's how to put the MultiDatePicker into a pop-over/dialog using
             // the .overlay modifier (see below).
             VStack {
-                Text("Pop-Over").font(.title).padding()
+                Text("Pop-Over")
+                    .font(.title)
+                    .padding()
+                
                 Button("Selected \(anyDays.count) Days") {
                     withAnimation {
                         self.showOverlay.toggle()
                     }
-                }.padding()
+                }
+                .padding()
             }
             .tabItem {
                 Image(systemName: "square.stack.3d.up")
                 Text("Overlay")
             }
         }
-        .onChange(of: self.selectedDate, perform: { date in
+        .onChange(of: self.selectedDate) { date in
             print("Single date selected: \(date)")
-        })
-        .onChange(of: self.anyDays, perform: { days in
+        }
+        .onChange(of: self.anyDays) { days in
             print("Any days selected: \(days)")
-        })
-        .onChange(of: self.dateRange, perform: { dateRange in
+        }
+        .onChange(of: self.dateRange) { dateRange in
             print("Range selected: \(String(describing: dateRange))")
-        })
+        }
         
         // if you want to show the MultiDatePicker as an overlay somewhat similar to the Apple
         // DatePicker, you can blur the background a bit and float the MultiDatePicker above a

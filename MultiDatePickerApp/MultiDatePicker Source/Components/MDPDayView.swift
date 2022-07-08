@@ -13,23 +13,23 @@ import SwiftUI
  */
 struct MDPDayView: View {
     @EnvironmentObject var monthDataModel: MDPModel
-    let cellSize: CGFloat = 30
+    let cellSize: CGFloat = 30 // FIXME: MAKE DYNAMIC
     var dayOfMonth: MDPDayOfMonth
     
     // outline "today"
     private var strokeColor: Color {
-        dayOfMonth.isToday ? Color.accentColor : Color.clear
+        dayOfMonth.isToday ? .accentColor : .clear
     }
     
     // filled if selected
     private var fillColor: Color {
-        monthDataModel.isSelected(dayOfMonth) ? Color.blue.opacity(0.55) : Color.clear
+        monthDataModel.isSelected(dayOfMonth) ? .accentColor.opacity(0.55) : .clear
     }
     
     // reverse color for selections or gray if not selectable
     private var textColor: Color {
         if dayOfMonth.isSelectable {
-            return monthDataModel.isSelected(dayOfMonth) ? Color.white : Color.black
+            return monthDataModel.isSelected(dayOfMonth) ? .white : .primary
         } else {
             return Color.gray
         }
@@ -42,7 +42,9 @@ struct MDPDayView: View {
     }
     
     var body: some View {
-        Button( action: {handleSelection()} ) {
+        Button {
+            handleSelection()
+        } label: {
             Text("\(dayOfMonth.day)")
                 .font(.headline)
                 .fontWeight(.medium)
@@ -54,7 +56,8 @@ struct MDPDayView: View {
                         .background(Circle().foregroundColor(fillColor))
                         .frame(width: cellSize, height: cellSize)
                 )
-        }.foregroundColor(.black)
+        }
+        .foregroundColor(.black)
     }
 }
 
