@@ -39,23 +39,25 @@ struct MDPMonthYearPicker: View {
         HStack(alignment: .center, spacing: 0) {
             Picker("", selection: self.$selectedMonth) {
                 ForEach(months, id: \.self) { month in
-                    Text("\(Calendar.current.monthSymbols[month])").tag(month)
+                    Text("\(Calendar.current.monthSymbols[month])")
+                        .tag(month)
                 }
             }
-            .onChange(of: selectedMonth, perform: { value in
+            .onChange(of: selectedMonth) { value in
                 self.action(value + 1, self.selectedYear)
-            })
+            }
             .frame(width: 150)
             .clipped()
             
             Picker("", selection: self.$selectedYear) {
                 ForEach(years, id: \.self) { year in
-                    Text(String(format: "%d", year)).tag(year)
+                    Text(String(format: "%d", year))
+                        .tag(year)
                 }
             }
-            .onChange(of: selectedYear, perform: { value in
+            .onChange(of: selectedYear) { value in
                 self.action(self.selectedMonth + 1, value)
-            })
+            }
             .frame(width: 100)
             .clipped()
         }

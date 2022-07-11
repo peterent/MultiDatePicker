@@ -21,13 +21,18 @@ struct MDPMonthYearPickerButton: View {
     @Binding var isPresented: Bool
     
     var body: some View {
-        Button( action: {withAnimation { isPresented.toggle()} } ) {
+        Button {
+            withAnimation {
+                isPresented.toggle()
+            }
+        } label: {
             HStack {
                 Text(monthDataModel.title)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(self.isPresented ? .accentColor : .black)
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(self.isPresented ? .accentColor : .primary)
+                    .lineLimit(1)
                 Image(systemName: "chevron.right")
+                    .font(.system(size: 17))
                     .rotationEffect(self.isPresented ? .degrees(90) : .degrees(0))
             }
         }
