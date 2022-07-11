@@ -13,7 +13,7 @@ import SwiftUI
  */
 struct MDPMonthView: View {
     @EnvironmentObject var monthDataModel: MDPModel
-        
+    
     @State private var showMonthYearPicker = false
     @State private var testDate = Date()
     
@@ -36,20 +36,41 @@ struct MDPMonthView: View {
             HStack {
                 MDPMonthYearPickerButton(isPresented: self.$showMonthYearPicker)
                 Spacer()
-                Button( action: {showPrevMonth()} ) {
-                    Image(systemName: "chevron.left").font(.title2)
-                }.padding()
-                Button( action: {showNextMonth()} ) {
-                    Image(systemName: "chevron.right").font(.title2)
-                }.padding()
+                
+                Button {
+                    showPrevMonth()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 22))
+                }
+                .padding()
+                
+                Button {
+                    showNextMonth()
+                } label: {
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 22))
+                }
+                .padding()
             }
             .padding(.leading, 18)
             
             GeometryReader { reader in
                 if showMonthYearPicker {
-                    MDPMonthYearPicker(date: monthDataModel.controlDate) { (month, year) in
-                        self.monthDataModel.show(month: month, year: year)
+                    HStack(alignment: .center) {
+                        MDPMonthYearPicker(date: monthDataModel.controlDate) { (month, year) in
+                            self.monthDataModel.show(month: month, year: year)
+                        }
                     }
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color(UIColor.systemBackground))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.accentColor, lineWidth: 1)
+                    )
+                    .padding()
                 }
                 else {
                     MDPContentView()
@@ -65,7 +86,7 @@ struct MDPMonthView: View {
                 .stroke(Color.accentColor, lineWidth: 1)
         )
         .padding()
-        .frame(width: 300, height: 300) // FIXME: DYNAMIC SIZE
+        .aspectRatio(1, contentMode: .fit)
     }
 }
 

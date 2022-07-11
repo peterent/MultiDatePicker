@@ -46,8 +46,7 @@ struct MDPDayView: View {
             handleSelection()
         } label: {
             Text("\(dayOfMonth.day)")
-                .font(.headline)
-                .fontWeight(.medium)
+                .font(.system(size: 17, weight: .medium))
                 .foregroundColor(textColor)
                 .frame(minHeight: cellSize, maxHeight: cellSize)
                 .background(

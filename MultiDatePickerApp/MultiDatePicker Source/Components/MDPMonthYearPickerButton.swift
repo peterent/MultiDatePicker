@@ -28,10 +28,11 @@ struct MDPMonthYearPickerButton: View {
         } label: {
             HStack {
                 Text(monthDataModel.title)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(self.isPresented ? .accentColor : .primary)
+                    .lineLimit(1)
                 Image(systemName: "chevron.right")
+                    .font(.system(size: 17))
                     .rotationEffect(self.isPresented ? .degrees(90) : .degrees(0))
             }
         }

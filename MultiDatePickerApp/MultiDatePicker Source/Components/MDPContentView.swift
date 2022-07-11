@@ -13,25 +13,24 @@ import SwiftUI
 struct MDPContentView: View {
     @EnvironmentObject var monthDataModel: MDPModel
     
-    let cellSize: CGFloat = 30
+    static let multplier = 0.045
     
     let columns = [
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2),
-        GridItem(.fixed(30), spacing: 2)
+
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: UIScreen.main.bounds.width * multplier, maximum: UIScreen.main.bounds.width * 0.2), spacing: 0, alignment: .center)
     ]
     
     var body: some View {
         LazyVGrid(columns: columns, spacing: 0) {
-            
-            // Sun, Mon, etc.
             ForEach(0..<monthDataModel.dayNames.count, id: \.self) { index in
                 Text(monthDataModel.dayNames[index].replacingOccurrences(of: ".", with: "").uppercased())
-                    .font(.caption)
+                    .font(.system(size: 12))
                     .foregroundColor(.gray)
             }
             .padding(.bottom, 10)
@@ -40,12 +39,13 @@ struct MDPContentView: View {
             ForEach(0..<monthDataModel.days.count, id: \.self) { index in
                 if monthDataModel.days[index].day == 0 {
                     Text("")
-                        .frame(minHeight: cellSize, maxHeight: cellSize)
+                        .frame(minHeight:  UIScreen.main.bounds.width * 0.05, maxHeight:  UIScreen.main.bounds.width * 0.05)
                 } else {
                     MDPDayView(dayOfMonth: monthDataModel.days[index])
                 }
             }
-        }.padding(.bottom, 10)
+        }
+        .padding([.bottom, .horizontal], 10)
     }
 }
 

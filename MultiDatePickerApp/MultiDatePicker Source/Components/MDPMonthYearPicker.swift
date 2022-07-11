@@ -46,7 +46,7 @@ struct MDPMonthYearPicker: View {
             .onChange(of: selectedMonth) { value in
                 self.action(value + 1, self.selectedYear)
             }
-            .frame(width: 150) // FIXME: DYNAMIC SIZE
+            .frame(width: 150)
             .clipped()
             
             Picker("", selection: self.$selectedYear) {
@@ -58,7 +58,7 @@ struct MDPMonthYearPicker: View {
             .onChange(of: selectedYear) { value in
                 self.action(self.selectedMonth + 1, value)
             }
-            .frame(width: 100) // FIXME: DYNAMIC SIZE
+            .frame(width: 100)
             .clipped()
         }
     }
